@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    color: white;
+    background-color: #170727;
+    user-select: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/*** Imagen de fondo al inicio ***/
+.img {
+    background-image: url(https://w0.peakpx.com/wallpaper/909/704/HD-wallpaper-keyboard-backlight-purple.jpg);
+    background-size: cover;
+    position: absolute;
+    height: 320px;
+    width: 100%;
+    height: 90%;
+    margin-top: -192px;
+    filter: brightness(50%);
+}
+
+/*** Header ***/
+
+header {
+    height: 12em;
+}
+
+#barra, h3, .copyright {
+    display: none;
+}
+
+.menu {
+    grid-row: 1/2;
+    grid-column: 1/13;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    height: 7em;
+    background-color: rgba(60, 60, 60, 0.461);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.menu li {
+    width: calc(100%/5);
+    outline: 1px solid black;
+    padding-top: 2rem;
+    transition: .8;
+}
+
+.menu li:hover {
+    background-color: rgba(128, 128, 128, 0.407);
+}
+
+a {
+    font-size: 2em;
+    padding: 10% 32%;
+    color: white;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+
+/********** Main **********/
+
+    /**** Principal ****/
+
+h1 {
+    grid-column: 4/10;
+    text-align: center;
+    font-size: 5em;
+    height: 12rem;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.icono {
+    grid-row: 2/3;
+    grid-column: 6/8;
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 12em;
+    z-index: 1;
+    
+}
+
+section {
+    grid-column: 3/11;
+    background-color: #341450;
+    outline: 2px solid #511981;
+    margin: 5em 0;
+    border-radius: 2em;
+    scroll-margin-top: 12.5em;
+    height: 640px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 1rem;
+    height: 100px;
+    border-bottom: 2px solid #511981;
+}
+
+/*** Contacto ***/
+.contacto {
+    grid-row: 3/4;
+}
+
+.contacto-lista {
+    list-style: none;
+    height: 540px;
+}
+
+.contacto-lista li {
+    height: calc(80% / 4);
+    font-size: 2em;
+    padding-top: 4.5rem;
+    text-align: center;
+}
+
+/*** Informacion ***/
+.informacion {
+    grid-row: 4/5;
+}
+
+.informacion p {
+    height: 540px;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 8rem;
+    line-height: 1.5em;
+}
+
+/*** Experiencia ***/
+.experiencia {
+    grid-row: 5/6;
+}
+
+.experiencia p {
+    font-size: 2em;
+    padding-left: 3rem;
+}
+
+.experiencia-lista {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.experiencia-lista li {
+    font-size: 2em;
+    padding: .5em 0;
+}
+
+/*** Educacion ***/
+.educacion {
+    grid-row: 6/7;
+}
+
+.educacion-lista {
+    height: 80%;
+}
+
+.educacion-lista li {
+    height: calc(90% / 4);
+    font-size: 2em;
+    margin-left: 20rem;
+    padding-top: 4rem;
+}
+
+
+/*** Habilidades ***/
+.habilidades {
+    grid-row: 7/8;
+}
+
+.habilidades-lista {
+    height: 80%;
+    padding-top: 6em;
+}
+
+.habilidades-lista li {
+    height: calc(80% / 3);
+    font-size: 2em;
+    float: left;
+    width: 40%;
+    margin-left: 7.5rem;
+}
+
+/********** Footer **********/
+
+.footer {
+    grid-column: 1 / 13;
+    background-color: #1f0d30;
+    height: 15rem;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+
+
+/********** Responsive **********/
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 10px;
+    }
+    #barra {
+        display: block;
+        z-index: 3;
+        width: 70px;
+        height: 70px;
+        color: white;
+        background-color: #6514ab;
+        font-size: 2.2em;
+        border: none;
+        border-radius: 3rem;
+        margin: 1rem 0 0 1rem;
+        cursor: pointer;
+        position: fixed;
+    }
+    #div-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background-color: #341450;
+        width: 250px;
+        height: 100vh;
+        transition: all 300ms;
+        z-index: 5;
+    }
+    h3 {
+        display: block;
+        text-align: center;
+        background-color: #481673;
+        font-size: 4em;
+        padding: 1.5rem 0;
+        margin-bottom: -1rem;
+    }
+    .menu {
+        flex-direction: column;
+        margin-top: 2rem;
+        background-color: rgba(255, 255, 255, 0);
+        width: auto;
+    }
+    .menu li {
+        outline: none;
+        margin-top: 30px;
+        padding: 2em 3em 2em 0em;
+        width: 100%;
+        margin-left: 4.2em;
+        outline: 1px solid #1f0d30;
+        border-radius: 2em;
+        background-color: #481673;
+    }
+    .menu li:hover {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #back-menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 5;
+        display: none;
+    }
+    .copyright {
+        display: block;
+        position: absolute;
+        bottom: 4em;
+        text-align: center;
+        margin-left: 5.8rem;
+        font-size: 2.5em;
+    }
+    .img {
+        margin-top: -22em;
+    }
+    /*** Main ***/
+    h1 {
+        width: auto;
+        grid-column: 1/13;
+        font-size: 6em;
+        padding: 0;
+    }
+    .icono {
+        grid-column: 4/10;
+        margin-bottom: 10em;
+    }
+
+    section {
+        grid-column: 1/13;
+        margin: 3em 0;
+        border-radius: 0;
+        outline: none;
+        scroll-margin-top: 18em;
+        z-index: 1;
+    }
+    h2 {
+        padding-bottom: 2.5em;
+        outline: 1px solid #1f0d30;
+    }
+
+    /*** Contacto ***/
+    .contacto {
+        height: 400px;
+    }
+    .contacto-lista li {
+        padding: 1.6em;
+    }
+
+    /*** Informacion ***/
+    .informacion {
+        height: 420px;
+        grid-row: 4/5;
+    }
+
+    .informacion p {
+        padding: 1.6em 0;
+    }
+
+    /*** Experiencia ***/
+    .experiencia {
+        height: 740px;
+    }
+
+    .experiencia p {
+        font-size: 2em;
+        padding: 1.5rem 0 0 1.5rem;
+    }
+
+    .experiencia-lista li {
+        font-size: 2em;
+        padding: 1.5rem 0;
+        margin-left: 2rem;
+    }
+
+    /*** Educacion ***/
+    .educacion {
+        height: 320px;
+    }
+
+    .educacion-lista {
+        height: 220px;
+        padding-top: 1.5rem;
+    }
+
+    .educacion-lista li {
+        padding: 0;
+        margin-left: 3rem;
+    } 
+
+
+    /*** Habilidades ***/
+    .habilidades {
+        height: 410px;
+    }
+
+    .habilidades-lista {
+        height: 310px;
+        padding-top: 1.5rem;
+    }
+
+    .habilidades-lista li {
+        height: 100px;
+        margin-left: 2rem;
+    }
+    
+    /*** Footer ***/
+    .footer {
+        margin-top: 1.5em;
+        padding-top: 2em;
+        height: 6em;
+    }
+}
